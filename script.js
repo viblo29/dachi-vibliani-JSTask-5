@@ -28,10 +28,17 @@ addTaskBtn.addEventListener(`click`, function () {
   doneBtn.innerText = `Complete`;
 
   doneBtn.addEventListener(`click`, function () {
-    newTask.style.textDecoration = `line-through`;
-    completedTasks++;
-    displayCompletedTasks.innerText = `Completed Tasks: ${completedTasks}`;
-    doneBtn.disabled = `true`;
+    if (doneBtn.innerText === 'Complete') {
+      newTask.style.textDecoration = `line-through`;
+      completedTasks++;
+      displayCompletedTasks.innerText = `Completed Tasks: ${completedTasks}`;
+      doneBtn.innerText = 'Uncomplete';
+    } else {
+      newTask.style.textDecoration = ``;
+      completedTasks--;
+      displayCompletedTasks.innerText = `Completed Tasks: ${completedTasks}`;
+      doneBtn.innerText = 'Complete';
+    }
   });
 
   const delBtn = document.createElement(`button`);
