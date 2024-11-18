@@ -31,6 +31,7 @@ addTaskBtn.addEventListener(`click`, function () {
     newTask.style.textDecoration = `line-through`;
     completedTasks++;
     displayCompletedTasks.innerText = `Completed Tasks: ${completedTasks}`;
+    doneBtn.disabled = `true`;
   });
 
   const delBtn = document.createElement(`button`);
