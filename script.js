@@ -32,7 +32,7 @@ addTaskBtn.addEventListener(`click`, function () {
       newTask.style.textDecoration = `line-through`;
       completedTasks++;
       displayCompletedTasks.innerText = `Completed Tasks: ${completedTasks}`;
-      doneBtn.innerText = 'Uncomplete';
+      doneBtn.innerText = 'Undo';
     } else {
       newTask.style.textDecoration = ``;
       completedTasks--;
